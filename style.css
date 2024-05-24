@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 2%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    display: flex;
+    justify-content: center;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.5rem;
+    gap: 10px;
+    font-weight: 400;
+    color: #FF577F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.cabecalho__menu__link:hover {
+    color: #61353f;
+}
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.apresentacao__projetos{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@keyframes digitando {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.apresentacao__conteudo__nome {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 2.25rem;
+    overflow: hidden; 
+    border-right: 0.1em solid #FF577F; 
+    white-space: nowrap; 
+    animation: digitando 2s steps(12, start), traco_piscando 0.8s step-start 1s infinite;
+}
+
+.nome-destaque {
+    color: #FF577F;
+}
+
+
+@keyframes traco_piscando {
+    from {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #FF577F;
+    }
+}
+
+.apresentacao__conteudo__nome__texto {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.5rem
+}
+
+.apresentacao__links__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid #FF577F;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: #F6F6F6;
+    font-family: "Lato", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.apresentacao__links__link:hover{
+    background-color: #61353f;
+}
+
+.apresentacao__imagem{
+    width: 40%;
+    border-radius: 25%;
+}
+.projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0% 22% 0%;
+}
+.projetos__imagem{
+    padding: 0% 8.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 35%;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-family: "Lato", sans-serif;
+    color: #B9B9B9;
+    background-color: rgb(25, 25, 25);
+    padding: 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.rodape__imagem{
+    width: 50px;
+    height: auto;
+}
+
+
+@media (max-width: 1271px) {
+    .cabecalho {
+        padding: 2% 0% 0% 5%;
+    }
+
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cabecalho__menu__link {
+        font-size: 1.2rem;
+    }
+
+    .apresentacao {
+        padding: 10% 5%;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .apresentacao__conteudo {
+        width: 100%;
+        order: 2;
+    }
+
+    .apresentacao__imagem {
+        width: 60%;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .apresentacao__links__link {
+        width: 80%;
+        padding: 15px 0;
+        font-size: 1.2rem;
+    }
+
+    .projetos {
+        padding: 5%;
+        align-items: center;
+        flex-direction: column; 
+        gap: 25px;
+    }
+
+    .projetos__imagem {
+        width: 82%;
+    }
+}
